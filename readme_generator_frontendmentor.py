@@ -1,6 +1,6 @@
 def generate_markdown_file():
     # Prompting user for inputs
-    project_name = input("Entre com o nome do projeto ")
+    project_name = input("Entre com o nome do projeto: ")
     repository_name = input("Enter the name of your repository: ")
     link_frontendmentor = input("Enter the link to Frontend Mentor: ")
     solution_url = input("Enter the link to the solution: ")
@@ -9,7 +9,7 @@ def generate_markdown_file():
     # Prompting user to enter challenges
     user_challenges = []
     while True:
-        user_challenges.append(input("Enter the name of the challenge: "))
+        user_challenges.append(input("Entre com os requisitos do desafio: "))
         if input("Do you want to add another challenge? (y/n): ") == "n":
             break
     for i in range(len(user_challenges)):
@@ -23,11 +23,11 @@ def generate_markdown_file():
         if input("Do you want to add another tecnology? (y/n): ") == "n":
             break
     for i in range(len(tecnologies)):
-        tecnologies[i] = f"-{tecnologies[i]})"
+        tecnologies[i] = f"- {tecnologies[i]}"
     tecnologies = "\n".join(tecnologies)
 
-    library_name = input("Entre com o nome da biblioteca JS ")
-    library = input("Insira o link da biblioteca JS ")
+    library_name = input("Entre com o nome da biblioteca JS: ")
+    library = input("Insira o link da biblioteca JS: ")
 
 
     # Generating screnshots
